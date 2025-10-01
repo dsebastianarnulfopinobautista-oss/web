@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ecohuellas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- FontAwesome para íconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Pantalla de Login -->
+  <section id="login" class="pantalla active">
+    <h1>Ecohuellas</h1>
+    <img src="https://cdn-icons-png.flaticon.com/512/3069/3069172.png" width="120" alt="logo ecohuellas">
+    <div class="card">
+      <input type="text" id="usuario" placeholder="Usuario">
+      <input type="password" id="password" placeholder="Contraseña">
+      <button class="btn-3d" onclick="iniciarSesion()">Iniciar sesión</button>
+    </div>
+  </section>
+
+  <!-- Pantalla de Inicio -->
+  <section id="inicio" class="pantalla">
+    <h1>Bienvenido a Ecohuellas</h1>
+    <div class="puntos">
+      <i class="fas fa-coins"></i> <span id="contadorPuntos">0</span> puntos
+    </div>
+    <div class="card">
+      <img id="evolucionSemilla" 
+           src="https://cdn-icons-png.flaticon.com/512/1346/1346665.png" 
+           alt="semilla ecológica">
+      <p>Tu planta crecerá con cada reto completado 🌱</p>
+    </div>
+    <div class="menu">
+      <button class="btn-3d" onclick="mostrarPantalla('retos')"><i class="fas fa-seedling"></i> Retos</button>
+      <button class="btn-3d" onclick="mostrarPantalla('enciclopedia')"><i class="fas fa-book"></i> Enciclopedia</button>
+      <button class="btn-3d" onclick="mostrarPantalla('canjear')"><i class="fas fa-gift"></i> Canjear</button>
+      <button class="btn-3d cerrar" onclick="cerrarSesion()"><i class="fas fa-door-open"></i> Cerrar sesión</button>
+    </div>
+  </section>
+
+  <!-- Pantalla de Retos -->
+  <section id="retos" class="pantalla">
+    <h1>Retos Ecohuellas</h1>
+    <div class="reto">
+      <span>Sube una foto reciclando</span>
+      <input type="file" accept="image/*" capture="camera" onchange="completarTarea(this)">
+    </div>
+    <div class="reto">
+      <span>Planta una semilla y súbela</span>
+      <input type="file" accept="image/*" capture="camera" onchange="completarTarea(this)">
+    </div>
+    <div class="reto">
+      <span>Ahorra agua por un día</span>
+      <input type="file" accept="image/*" capture="camera" onchange="completarTarea(this)">
+    </div>
+
+    <button class="btn-3d" onclick="toggleCalendario()">
+      <i class="fas fa-calendar-alt"></i> Ver calendario
+    </button>
+    <div class="calendario" id="calendarioContainer"></div>
+
+    <button class="btn-3d cerrar" onclick="mostrarPantalla('inicio')">
+      <i class="fas fa-arrow-left"></i> Volver
+    </button>
+  </section>
+
+  <!-- Pantalla Enciclopedia -->
+  <section id="enciclopedia" class="pantalla">
+    <h1>Enciclopedia</h1>
+    <div class="card">
+      <p>Estamos trabajando en ello 📚</p>
+    </div>
+    <button class="btn-3d cerrar" onclick="mostrarPantalla('inicio')">
+      <i class="fas fa-arrow-left"></i> Volver
+    </button>
+  </section>
+
+  <!-- Pantalla Canjear -->
+  <section id="canjear" class="pantalla">
+    <h1>Canjear Puntos</h1>
+    <div class="card">
+      <p>Estamos trabajando en ello 🎁</p>
+    </div>
+    <button class="btn-3d cerrar" onclick="mostrarPantalla('inicio')">
+      <i class="fas fa-arrow-left"></i> Volver
+    </button>
+  </section>
+
+  <!-- Script -->
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f1fdf3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.pantalla {
+  display: none;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+}
+
+.pantalla.active {
+  display: block;
+}
+
+h1 {
+  color: #2e7d32;
+}
+
+.btn-3d {
+  display: block;
+  width: 90%;
+  margin: 12px auto;
+  padding: 14px;
+  background: #4caf50;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 5px #2e7d32;
+  transition: 0.2s;
+}
+
+.btn-3d:active {
+  box-shadow: 0 2px #2e7d32;
+  transform: translateY(3px);
+}
+
+.btn-3d.cerrar {
+  background: #e53935;
+  box-shadow: 0 5px #b71c1c;
+}
+
+.card {
+  background: white;
+  border-radius: 16px;
+  padding: 16px;
+  margin: 16px auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.card img {
+  width: 120px;
+  margin: 10px auto;
+}
+
+input {
+  width: 90%;
+  padding: 10px;
+  margin: 8px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.reto {
+  background: #e8f5e9;
+  border-radius: 10px;
+  padding: 12px;
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.reto.completado {
+  background: #c8e6c9;
+}
+
+.reto span {
+  flex: 1;
+  text-align: left;
+}
+
+.calendario {
+  display: none;
+  margin-top: 15px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+}
+
+.hoy {
+  border: 2px solid red;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+.menu {
+  margin-top: 20px;
+}
+
+.puntos {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px;
+  color: #2e7d32;
+}
